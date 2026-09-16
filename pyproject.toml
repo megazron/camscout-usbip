@@ -28,7 +28,6 @@ camera-doctor = "usbip_camera_doctor.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/megazron/camscout-usbip"
-Origin = "https://github.com/megazron/Multimodal-control-of-a-wearable-dual-arm-robotic-system-for-assisted-object-manipulation"
 
 [tool.setuptools.packages.find]
 where = ["src"]

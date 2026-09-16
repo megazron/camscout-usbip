@@ -4,7 +4,6 @@
 
 *Live CLI demo: the doctor stops at the first broken layer.*
 
-
 **Name the first broken layer between a camera and your robot stack, instead of staring at a blank panel.**
 
 Every camera fault on a Linux or WSL2 robot rig presents identically: a node sitting at 20-30 % CPU, a topic that exists with `Publisher count: 1`, and nothing on the screen. Behind that one symptom there are at least seven independent layers that can be wrong, and a fault at layer 2 makes every answer above it meaningless. This tool walks them in order, stops at the first one that is broken, and prints the fix in the operator's words.
@@ -177,10 +176,6 @@ Every check takes injectable roots (`sysfs_root`, `proc_root`, `proc_modules`, `
 ![RTSP states](docs/img/rtsp_states.svg)
 
 *What the RTSP probe can tell apart by speaking the protocol, against what ping and HTTP 200 cannot.*
-
-## Origin
-
-Extracted from the MSc project *Multimodal control of a wearable dual-arm robotic system for assisted object manipulation* (Imperial College London, 2026): two Kinova Gen3 arms on a backpack frame, driven from a master mannequin arm and a Quest headset, with a shared-autonomy layer, all running ROS 2 Jazzy under WSL2. The main project lives at <https://github.com/megazron/Multimodal-control-of-a-wearable-dual-arm-robotic-system-for-assisted-object-manipulation>. Every number above was measured on that rig.
 
 ## Figures
 
