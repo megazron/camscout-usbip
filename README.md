@@ -2,7 +2,7 @@
 
 ![demo](docs/img/demo.gif)
 
-*Live CLI demo: the doctor stops at the first broken layer.*
+*Four commands of the CLI.*
 
 **Name the first broken layer between a camera and your robot stack, instead of staring at a blank panel.**
 
