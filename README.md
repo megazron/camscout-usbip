@@ -1,5 +1,10 @@
 # CamScout
 
+![demo](docs/img/demo.gif)
+
+*Live CLI demo: the doctor stops at the first broken layer.*
+
+
 **Name the first broken layer between a camera and your robot stack, instead of staring at a blank panel.**
 
 Every camera fault on a Linux or WSL2 robot rig presents identically: a node sitting at 20-30 % CPU, a topic that exists with `Publisher count: 1`, and nothing on the screen. Behind that one symptom there are at least seven independent layers that can be wrong, and a fault at layer 2 makes every answer above it meaningless. This tool walks them in order, stops at the first one that is broken, and prints the fix in the operator's words.
