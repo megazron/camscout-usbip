@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usbip-camera-doctor"
+version = "0.1.0"
+description = "Layer-by-layer doctor for USB (usbipd/WSL2) and RTSP cameras reaching a Linux robot stack: names the first broken layer instead of a blank panel."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Gaus Mohiuddin Sayyad", email = "maintainer@example.com"}]
+keywords = ["usbipd", "wsl2", "v4l2", "camera", "rtsp", "robotics", "ros2", "realsense"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Topic :: System :: Hardware",
+]
+dependencies = []
+
+[project.optional-dependencies]
+probe = ["opencv-python"]
+test = ["pytest"]
+
+[project.scripts]
+camera-doctor = "usbip_camera_doctor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/megazron/usbip-camera-doctor"
+Origin = "https://github.com/megazron/Multimodal-control-of-a-wearable-dual-arm-robotic-system-for-assisted-object-manipulation"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
