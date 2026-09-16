@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="600" viewBox="0 0 1080 600" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563eb"/></marker></defs>
+<rect width="1080" height="600" fill="#ffffff"/>
+<text x="24" y="34" font-size="16" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Seven layers, walked in order. The doctor stops at the first one that is broken.</text>
+<text x="24" y="54" font-size="12" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">A fault low down makes every answer above it meaningless, so nothing above the break is reported as healthy.</text>
+<rect x="24" y="78" width="470" height="56" rx="6" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.6"/>
+<text x="38" y="100" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">1  usbipd hand-over</text>
+<text x="38" y="118" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Windows must bind (admin, once) and attach (each session) the device to</text>
+<text x="38" y="131" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">WSL</text>
+<line x1="259.0" y1="134" x2="259.0" y2="145" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="24" y="146" width="470" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="38" y="168" font-size="13" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">2  kernel modules</text>
+<text x="38" y="186" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">vhci-hcd and uvcvideo loaded; otherwise usbipd says Attached and Linux has</text>
+<text x="38" y="199" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">no /dev/video*</text>
+<line x1="259.0" y1="202" x2="259.0" y2="213" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="24" y="214" width="470" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="38" y="236" font-size="13" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">3  /dev/video* present</text>
+<text x="38" y="254" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">a capture node exists at all</text>
+<line x1="259.0" y1="270" x2="259.0" y2="281" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="24" y="282" width="470" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="38" y="304" font-size="13" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">4  identity by VID:PID</text>
+<text x="38" y="322" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">the node is the camera you meant; the index is not an identity, it</text>
+<text x="38" y="335" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">renumbers on re-attach</text>
+<line x1="259.0" y1="338" x2="259.0" y2="349" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="24" y="350" width="470" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="38" y="372" font-size="13" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">5  frame delivery</text>
+<text x="38" y="390" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">opens is not delivers: read a frame, MJPG 640x480 first, then 720p, then</text>
+<text x="38" y="403" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">YUYV</text>
+<line x1="259.0" y1="406" x2="259.0" y2="417" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="24" y="418" width="470" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="38" y="440" font-size="13" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">6  exclusive openers</text>
+<text x="38" y="458" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">a V4L2 device cannot be opened twice for capture; the loser silently gets</text>
+<text x="38" y="471" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">nothing</text>
+<line x1="259.0" y1="474" x2="259.0" y2="485" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="24" y="486" width="470" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+<text x="38" y="508" font-size="13" font-weight="bold" fill="#1f2937" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">7  stream rate and gaps</text>
+<text x="38" y="526" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">achieved Hz and the longest gap against a stale threshold</text>
+<rect x="506" y="93" width="77" height="20" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.2"/>
+<text x="544.5" y="107" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">STOP HERE</text>
+<text x="506" y="134" font-size="11" font-weight="normal" fill="#b91c1c" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">verdict names this layer</text>
+<text x="506" y="150" font-size="11" font-weight="normal" fill="#b91c1c" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">and prints the exact fix</text>
+<text x="506" y="179" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">SKIP  not reached</text>
+<text x="506" y="247" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">SKIP  not reached</text>
+<text x="506" y="315" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">SKIP  not reached</text>
+<text x="506" y="383" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">SKIP  not reached</text>
+<text x="506" y="451" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">SKIP  not reached</text>
+<text x="506" y="519" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">SKIP  not reached</text>
+<rect x="640" y="78" width="416" height="464" rx="8" fill="#0b1220" stroke="#0b1220" stroke-width="1.2"/>
+<circle cx="656" cy="94" r="5" fill="#ef4444"/><circle cx="672" cy="94" r="5" fill="#f59e0b"/><circle cx="688" cy="94" r="5" fill="#22c55e"/>
+<text x="848.0" y="98" font-size="11" font-weight="normal" fill="#94a3b8" text-anchor="middle" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">$ camera-doctor      (this machine)</text>
+<text x="652" y="124" font-size="9.5" font-weight="normal" fill="#93c5fd" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">== CAMERA DOCTOR == (Gaus, WSL)</text>
+<text x="652" y="137" font-size="9.5" font-weight="normal" fill="#f87171" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  usbipd hand-over   BROKEN       Windows sees 'HP 5MP Cam</text>
+<text x="652" y="150" font-size="9.5" font-weight="normal" fill="#f87171" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">era, HP IR Camera, Camera DFU Device' (30c9:00c1, busid 2-</text>
+<text x="652" y="163" font-size="9.5" font-weight="normal" fill="#f87171" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">5) but it is Not shared, not Attached</text>
+<text x="652" y="176" font-size="9.5" font-weight="normal" fill="#fbbf24" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">                                  fix: usbipd bind --busid</text>
+<text x="652" y="189" font-size="9.5" font-weight="normal" fill="#fbbf24" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace"> 2-5; usbipd attach --wsl --busid 2-5</text>
+<text x="652" y="202" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  kernel modules     SKIP         not reached: a lower lay</text>
+<text x="652" y="215" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">er is broken</text>
+<text x="652" y="228" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  video devices      SKIP         not reached: a lower lay</text>
+<text x="652" y="241" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">er is broken</text>
+<text x="652" y="254" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  identity           SKIP         not reached: a lower lay</text>
+<text x="652" y="267" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">er is broken</text>
+<text x="652" y="280" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  frame delivery     SKIP         not reached: a lower lay</text>
+<text x="652" y="293" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">er is broken</text>
+<text x="652" y="306" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  exclusive openers  SKIP         not reached: a lower lay</text>
+<text x="652" y="319" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">er is broken</text>
+<text x="652" y="332" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">  stream rate        SKIP         not reached: a lower lay</text>
+<text x="652" y="345" font-size="9.5" font-weight="normal" fill="#64748b" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">er is broken</text>
+<text x="652" y="358" font-size="9.5" font-weight="normal" fill="#e5e7eb" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace"></text>
+<text x="652" y="371" font-size="9.5" font-weight="normal" fill="#f87171" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace">verdict: first broken layer is 'usbipd hand-over'</text>
+<text x="640" y="564" font-size="11" font-weight="normal" fill="#6b7280" text-anchor="start" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-style="italic">Real output. Layers above the break are reported SKIP, never healthy.</text>
+</svg>
