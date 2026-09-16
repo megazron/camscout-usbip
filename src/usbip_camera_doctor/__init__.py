@@ -1,4 +1,4 @@
-"""usbip-camera-doctor: name the broken layer between a camera and a robot stack.
+"""camscout-usbip: name the broken layer between a camera and a robot stack.
 
 Every camera fault looks the same from the top: a node burning CPU, a topic
 with one publisher, and a blank panel. This package walks the layers in order

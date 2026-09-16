@@ -1,4 +1,4 @@
-# usbip-camera-doctor
+# CamScout
 
 **Name the first broken layer between a camera and your robot stack, instead of staring at a blank panel.**
 
@@ -24,7 +24,7 @@ verdict: first broken layer is 'rtsp 192.168.1.10'
 
 On one weekend of lab time (2026-08-29/30) the single symptom "the camera panel is blank" was produced by five different causes, each of which took hours to tell apart by hand:
 
-1. **Stale DDS shared memory.** After a `kill -9`, FastDDS segments leak; publishers publish, subscribers receive nothing. Seen at 214 stale entries. (That layer lives in the sister tool [`ros2-wsl-doctor`](https://github.com/megazron/ros2-wsl-doctor).)
+1. **Stale DDS shared memory.** After a `kill -9`, FastDDS segments leak; publishers publish, subscribers receive nothing. Seen at 214 stale entries. (That layer lives in the sister tool [`ddsdetective-ros2`](https://github.com/megazron/ddsdetective-ros2).)
 2. **QoS mismatch.** Camera topics are BEST_EFFORT. A default RELIABLE subscriber, including a plain `ros2 topic hz`, receives zero and says the topic "does not appear to be published yet". A healthy camera was diagnosed as dead this way.
 3. **Two openers of one V4L2 device.** A device cannot be opened twice for capture. The loser gets nothing, silently, and which one loses depends on start order.
 4. **A wedged vision module on the arm.** `ping` and HTTP 200 proved the arm's network stack and said nothing about its camera. The RTSP server accepted connections and never replied; the driver retried for ever and published a topic with no frames.
@@ -56,10 +56,10 @@ The rig had four camera feeds over three transports, and it took 40 minutes to w
 
 ```bash
 # everything, including the OpenCV frame-delivery probe
-pip install "usbip-camera-doctor[probe] @ git+https://github.com/megazron/usbip-camera-doctor"
+pip install "camscout-usbip[probe] @ git+https://github.com/megazron/camscout-usbip"
 
 # stdlib only (layers 1-3, 5 and 7; the probe layer reports SKIP with the pip line to add)
-pip install git+https://github.com/megazron/usbip-camera-doctor
+pip install git+https://github.com/megazron/camscout-usbip
 ```
 
 Python 3.10+. Linux and WSL2. No ROS dependency anywhere.
@@ -138,7 +138,7 @@ A panel with a 0.5 s stale threshold flickered on every RealSense gap while the 
 
 * Camera topics are published with `qos_profile_sensor_data` (BEST_EFFORT). A plain `create_subscription(...)` and `ros2 topic hz` are RELIABLE by default and receive **nothing**; DDS logs one `incompatible QoS ... RELIABILITY` warning and goes quiet. Use `ros2 topic hz --qos-reliability best_effort` and subscribe with the sensor-data profile.
 * A 720p raw `Image` exceeds the default SHM segment; publish 640x480 or compressed, or raise the segment size.
-* The rest of the "publisher fine, nobody receives" family (stale `/dev/shm`, domain splits, a hung `ros2` daemon) is covered by [`ros2-wsl-doctor`](https://github.com/megazron/ros2-wsl-doctor).
+* The rest of the "publisher fine, nobody receives" family (stale `/dev/shm`, domain splits, a hung `ros2` daemon) is covered by [`ddsdetective-ros2`](https://github.com/megazron/ddsdetective-ros2).
 
 ## Python API
 

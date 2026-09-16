@@ -206,7 +206,7 @@ def topology():
             s.arrow(x + w + 2, y + h / 2, nx - 2, y + h / 2)
     # failure markers
     fails = [
-        (1, 510, "stale /dev/shm segments", "publisher decodes, subscriber gets nothing", "see ros2-wsl-doctor"),
+        (1, 510, "stale /dev/shm segments", "publisher decodes, subscriber gets nothing", "see ddsdetective-ros2"),
         (2, 1000, "QoS mismatch", "RELIABLE subscriber vs BEST_EFFORT publisher", "ros2 topic hz also gets zero"),
         (3, 720, "two openers of one device", "first to start wins, the other reads nothing", "camera-doctor who /dev/videoN"),
         (4, 330, "wedged RTSP vision module", "ping and HTTP 200 still pass", "camera-doctor rtsp IP"),

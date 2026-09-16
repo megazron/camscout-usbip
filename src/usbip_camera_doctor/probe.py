@@ -28,7 +28,7 @@ from . import v4l2
 DEFAULT_LADDER: list[tuple[str, int, int]] = [
     ("MJPG", 640, 480), ("MJPG", 1280, 720), ("YUYV", 640, 480)]
 
-INSTALL_HINT = 'pip install "usbip-camera-doctor[probe]"  (or: pip install opencv-python)'
+INSTALL_HINT = 'pip install "camscout-usbip[probe]"  (or: pip install opencv-python)'
 
 
 def parse_ladder(text: str) -> list[tuple[str, int, int]]:
