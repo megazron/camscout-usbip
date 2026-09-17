@@ -9,7 +9,7 @@ description = "Layer-by-layer doctor for USB (usbipd/WSL2) and RTSP cameras reac
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "Gaus Mohiuddin Sayyad", email = "maintainer@example.com"}]
+authors = [{name = "Gaus Mohiuddin Sayyad"}]
 keywords = ["usbipd", "wsl2", "v4l2", "camera", "rtsp", "robotics", "ros2", "realsense"]
 classifiers = [
   "Programming Language :: Python :: 3",
